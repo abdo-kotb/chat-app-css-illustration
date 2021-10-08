@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="In this challenge, I built out the entire app illustration from scratch using only HTML and CSS."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Chat App CSS Illustration</title>
+  </head>
+  <body>
+    <main aria-hidden="true">
+      <div class="app">
+        <div class="heading-container">
+          <div class="details">
+            <span class="arrow"></span>
+            <img src="images/avatar.jpg" class="avatar" />
+            <div class="personal">
+              <p class="name">Samuel Green</p>
+              <p class="status">Available to Walk</p>
+            </div>
+          </div>
+          <div class="dots">...</div>
+        </div>
+        <div class="chat-body">
+          <p class="chat-left hidden">
+            That sounds great. I’d be happy with that.
+          </p>
+          <p class="chat-left hidden">
+            Could you send over some pictures of your dog, please?
+          </p>
+          <div class="dog-imgs hidden">
+            <img class="dog-img" src="images/dog-image-1.jpg" />
+            <img class="dog-img" src="images/dog-image-2.jpg" />
+            <img class="dog-img" src="images/dog-image-3.jpg" />
+          </div>
+          <p class="chat-right hidden">
+            Here are a few pictures. She’s a happy girl!
+          </p>
+          <p class="chat-right last hidden">Can you make it?</p>
+          <p class="chat-left hidden">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+          <div class="radio hidden">
+            <span class="radio-btn"></span>
+            <p class="radio-text">30 minute walk</p>
+            <span class="price"> $29 </span>
+          </div>
+          <div class="radio hidden">
+            <span class="radio-btn"></span>
+            <p class="radio-text">1 hour walk</p>
+            <span class="price"> $49 </span>
+          </div>
+        </div>
+        <div class="submit">
+          Type a message…
+          <div class="submit-btn"></div>
+        </div>
+      </div>
+      <div class="text-box">
+        <h1 class="heading">Simple booking</h1>
+        <p class="text">
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/abdo-kotb/">Abdulrhman Kotb</a>.
+      </div>
+    </footer>
+  </body>
+  <script>
+    const chat = document.getElementsByClassName("hidden");
+    for (let i = 0; i < chat.length; i++) {
+      setInterval(() => (chat[i].style.transform = "unset"), i * 750);
+    }
+  </script>
+</html>
